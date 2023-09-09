@@ -1,1 +1,1 @@
-# terraform code for vprofile project.
+# Terraform code for vprofile project
