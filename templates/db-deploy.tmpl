@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo apt update
+sudo apt install -f
+sudo apt install mysql-client-core-8.0
+sudo apt install git -y
+cd /home/ubuntu
+git clone -b vp-rem https://github.com/devopshydclub/vprofile-project.git
+mysql -h ${rds-endpoint} -u ${dbuser} --password=${dbpass} accounts --ssl-mode=DISABLED < /home/ubuntu/vprofile-project/src/main/resources/db_backup.sql
